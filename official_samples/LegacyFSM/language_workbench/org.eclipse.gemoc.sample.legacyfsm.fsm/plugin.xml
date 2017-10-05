@@ -14,10 +14,4 @@
   <extension point="org.eclipse.gemoc.gemoc_language_workbench.sequential.xdsml">
     <XDSML_Definition modelLoader_class="org.eclipse.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.eclipse.gemoc.sample.legacyfsm.fsm.FSM" xdsmlFilePath="/org.eclipse.gemoc.sample.legacyfsm.fsm/src/org/eclipse/gemoc/sample/legacyfsm/fsm/FSM.melange" />
   </extension>
-  <extension point="fr.inria.diverse.melange.modeltype">
-    <modeltype id="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT" uri="http://org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt/" />
-  </extension>
-  <extension point="fr.inria.diverse.melange.language">
-    <language aspects="" entryPoints="" exactType="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT" id="org.eclipse.gemoc.sample.legacyfsm.fsm.FSM" uri="http://www.gemoc.org/legacyfsm/fsm" />
-  </extension>
 </plugin>
