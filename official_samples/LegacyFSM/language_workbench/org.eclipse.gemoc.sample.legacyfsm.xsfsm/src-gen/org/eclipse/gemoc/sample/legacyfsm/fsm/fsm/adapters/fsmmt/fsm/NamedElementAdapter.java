@@ -1,17 +1,17 @@
-package org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm;
+package org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm;
 
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory;
-import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.NamedElement;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.NamedElement;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory;
 
 @SuppressWarnings("all")
 public class NamedElementAdapter extends EObjectAdapter<NamedElement> implements org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.NamedElement {
   private FSMMTAdaptersFactory adaptersFactory;
   
   public NamedElementAdapter() {
-    super(org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
-    adaptersFactory = org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance();
+    super(org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
+    adaptersFactory = org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance();
   }
   
   @Override

@@ -1,18 +1,18 @@
-package org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm;
+package org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm;
 
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.Transition;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory;
 import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State;
-import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory;
-import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.Transition;
 
 @SuppressWarnings("all")
 public class TransitionAdapter extends EObjectAdapter<Transition> implements org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.Transition {
   private FSMMTAdaptersFactory adaptersFactory;
   
   public TransitionAdapter() {
-    super(org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
-    adaptersFactory = org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance();
+    super(org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
+    adaptersFactory = org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance();
   }
   
   @Override
@@ -53,7 +53,7 @@ public class TransitionAdapter extends EObjectAdapter<Transition> implements org
   @Override
   public void setSource(final State o) {
     if (o != null)
-    	adaptee.setSource(((org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm.StateAdapter) o).getAdaptee());
+    	adaptee.setSource(((org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm.StateAdapter) o).getAdaptee());
     else adaptee.setSource(null);
   }
   
@@ -65,7 +65,7 @@ public class TransitionAdapter extends EObjectAdapter<Transition> implements org
   @Override
   public void setTarget(final State o) {
     if (o != null)
-    	adaptee.setTarget(((org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm.StateAdapter) o).getAdaptee());
+    	adaptee.setTarget(((org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm.StateAdapter) o).getAdaptee());
     else adaptee.setTarget(null);
   }
   

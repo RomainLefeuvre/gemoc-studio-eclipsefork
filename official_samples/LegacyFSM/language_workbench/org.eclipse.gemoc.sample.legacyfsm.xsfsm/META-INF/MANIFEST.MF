@@ -7,7 +7,12 @@ Export-Package: org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsmmt.fsm,
  org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.xsfsmmt,
  org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt,
  org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.xsfsmmt.fsm,
- org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm
+ org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm,
+ org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.util,
+ org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.impl,
+ org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm,
+ org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm,
+ org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt
 Bundle-Name: org.eclipse.gemoc.sample.legacyfsm.xsfsm
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .

@@ -1,21 +1,21 @@
-package org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm;
+package org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm;
 
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.State;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory;
 import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.StateMachine;
 import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.Transition;
-import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory;
-import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.State;
 
 @SuppressWarnings("all")
 public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State {
   private FSMMTAdaptersFactory adaptersFactory;
   
   public StateAdapter() {
-    super(org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
-    adaptersFactory = org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance();
+    super(org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
+    adaptersFactory = org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance();
   }
   
   @Override
@@ -36,7 +36,7 @@ public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.g
   @Override
   public void setOwningFSM(final StateMachine o) {
     if (o != null)
-    	adaptee.setOwningFSM(((org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm.StateMachineAdapter) o).getAdaptee());
+    	adaptee.setOwningFSM(((org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm.StateMachineAdapter) o).getAdaptee());
     else adaptee.setOwningFSM(null);
   }
   

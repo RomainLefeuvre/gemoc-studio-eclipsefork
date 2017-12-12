@@ -1,4 +1,4 @@
-package org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt;
+package org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt;
 
 import fr.inria.diverse.melange.adapters.ResourceAdapter;
 import java.io.IOException;
@@ -8,14 +8,14 @@ import org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT;
 import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmFactory;
 
 @SuppressWarnings("all")
-public class XSFSMAdapter extends ResourceAdapter implements FSMMT {
-  public XSFSMAdapter() {
-    super(org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
+public class FSMAdapter extends ResourceAdapter implements FSMMT {
+  public FSMAdapter() {
+    super(org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMMTAdaptersFactory.getInstance());
   }
   
   @Override
   public FsmFactory getFsmFactory() {
-    return new org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm.FsmFactoryAdapter();
+    return new org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.fsm.FsmFactoryAdapter();
   }
   
   @Override
