@@ -52,7 +52,6 @@ public class GenerateLangRuntime4OfficialSampleLegacyFSM_Test extends AbstractXt
 	static final String BASE_FOLDER_NAME = "tests-inputs-gen/SequentialFSM"
 	static final String BASE_PROJECT_NAME = "org.eclipse.gemoc.sample.legacyfsm"
 	static final String PROJECT_NAME = BASE_PROJECT_NAME+".fsm"
-	static final String MELANGE_FILE = PROJECT_NAME+"/src/org/eclipse/gemoc/sample/legacyfsm/fsm/FSM.melange"
 	static final String PROJECT_NAME2 = BASE_PROJECT_NAME+".xsfsm"
 	static final String MELANGE_FILE2 = PROJECT_NAME2+"/src/org/eclipse/gemoc/sample/legacyfsm/xsfsm/language/XSFSM.melange"
 	
@@ -84,14 +83,12 @@ public class GenerateLangRuntime4OfficialSampleLegacyFSM_Test extends AbstractXt
 		//helper.deployProject(PROJECT_NAME2+".design",BASE_FOLDER_NAME+"/"+PROJECT_NAME2+".design.zip")
 		
 		IResourcesSetupUtil::reallyWaitForAutoBuild
-		melangeHelper.cleanAll(MELANGE_FILE)
 		melangeHelper.cleanAll(MELANGE_FILE2)
 		IResourcesSetupUtil::reallyWaitForAutoBuild
 		
 		val ArrayList<Throwable> thrownException = newArrayList()
 		Display.^default.syncExec([
 			try {
-				melangeHelper.openEditor(MELANGE_FILE)
 				melangeHelper.openEditor(MELANGE_FILE2)
 			} catch (Exception e) { thrownException.add(e) }
 		])
@@ -108,7 +105,6 @@ public class GenerateLangRuntime4OfficialSampleLegacyFSM_Test extends AbstractXt
 		val ArrayList<Throwable> thrownException = newArrayList()
 		Display.^default.syncExec([
 			try {
-				melangeHelper.generateAll(MELANGE_FILE)
 				melangeHelper.generateAll(MELANGE_FILE2)
 			} catch (Exception e) {	thrownException.add(e) }
 		])
@@ -124,25 +120,12 @@ public class GenerateLangRuntime4OfficialSampleLegacyFSM_Test extends AbstractXt
 	@Test
 	def void test02_GenerateAllMelange_usingClickOnMelangeFile_NoErrorsInWorkspace() {
 		var projExplorerBot = bot.viewByTitle("Project Explorer").bot
-		//bot.viewByTitle("Project Explorer").
-		projExplorerBot.tree().getTreeItem(PROJECT_NAME).expand();
-		projExplorerBot.tree().getTreeItem(PROJECT_NAME).getNode("src").expand();
-		projExplorerBot.tree().getTreeItem(PROJECT_NAME).getNode("src").getNode(PROJECT_NAME).expand();
-		var SWTBotTreeItem melangeFileItem = bot.tree().getTreeItem(PROJECT_NAME).getNode("src").getNode(PROJECT_NAME)
-				.getNode("FSM.melange").select();
-		melangeFileItem.contextMenu("Melange").menu("Generate All").click();
-
-		// Melange "Generate all is a bit special as it trigger several jobs one after the other
-		// retry in order to make sure they all have been done 
-		WorkspaceTestHelper::reallyWaitForJobs(50)
-		IResourcesSetupUtil::reallyWaitForAutoBuild
 		
-		projExplorerBot = bot.viewByTitle("Project Explorer").bot
 		//bot.viewByTitle("Project Explorer").
 		projExplorerBot.tree().getTreeItem(PROJECT_NAME2).expand();
 		projExplorerBot.tree().getTreeItem(PROJECT_NAME2).getNode("src").expand();
 		projExplorerBot.tree().getTreeItem(PROJECT_NAME2).getNode("src").getNode(PROJECT_NAME2+".language").expand();
-		melangeFileItem = bot.tree().getTreeItem(PROJECT_NAME2).getNode("src").getNode(PROJECT_NAME2+".language")
+		var SWTBotTreeItem melangeFileItem = bot.tree().getTreeItem(PROJECT_NAME2).getNode("src").getNode(PROJECT_NAME2+".language")
 				.getNode("XSFSM.melange").select();
 		melangeFileItem.contextMenu("Melange").menu("Generate All").click();
 		

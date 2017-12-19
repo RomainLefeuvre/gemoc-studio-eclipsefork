@@ -42,9 +42,8 @@ public class GenerateTrace4OfficialSampleLegacyFSM_Test extends AbstractXtextTes
 	static final String BASE_FOLDER_NAME = "tests-inputs-gen/SequentialFSM"
 	static final String BASE_PROJECT_NAME = "org.eclipse.gemoc.sample.legacyfsm"
 	static final String PROJECT_NAME = BASE_PROJECT_NAME+".fsm"
-	static final String MELANGE_FILE = PROJECT_NAME+"/src/org/eclipse/gemoc/sample/legacyfsm/fsm/FSM.melange"
 	static final String PROJECT_NAME2 = BASE_PROJECT_NAME+".xsfsm"
-	static final String MELANGE_FILE2 = PROJECT_NAME2+"/src/org/eclipse/gemoc/sample/legacyfsm/xsfsm/language/XSFSM.melange"
+	static final String DSL_FILE2 = PROJECT_NAME2+".xsfsm/model/XSFSM.dsl"
 	
 	@Before
 	override setUp() {
@@ -82,7 +81,7 @@ public class GenerateTrace4OfficialSampleLegacyFSM_Test extends AbstractXtextTes
 		val ArrayList<Throwable> thrownException = newArrayList()
 		Display.^default.syncExec([
 			try{
-				helper.generateTrace(MELANGE_FILE2, "XSFSM", PROJECT_NAME2+".trace")
+				helper.generateTrace(DSL_FILE2, "XSFSM", PROJECT_NAME2+".trace")
 			} catch (Exception e) {
 				thrownException.add(e)
 			}

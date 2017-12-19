@@ -141,7 +141,7 @@ public class CreateSingleSequentialLanguageFromOfficialFSM_Test extends Abstract
 		projExplorerBot.tree().getTreeItem(PROJECT_NAME).getNode("src").expand();
 		projExplorerBot.tree().getTreeItem(PROJECT_NAME).getNode("src").getNode(BASE_NAME).expand();
 		val SWTBotTreeItem melangeFileItem = bot.tree().getTreeItem(PROJECT_NAME).getNode("src").getNode(BASE_NAME)
-				.getNode("Xfsm.melange").select();
+				.getNode("XFSM.melange").select();
 		melangeFileItem.contextMenu("Melange").menu("Generate All").click();
 
 		// Melange "Generate all is a bit special as it trigger several jobs one after the other
