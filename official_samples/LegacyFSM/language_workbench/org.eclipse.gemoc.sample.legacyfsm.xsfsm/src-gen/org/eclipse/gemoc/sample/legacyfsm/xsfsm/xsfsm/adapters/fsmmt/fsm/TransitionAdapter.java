@@ -2,12 +2,12 @@ package org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm;
 
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.State;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State;
 import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory;
 import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.Transition;
 
 @SuppressWarnings("all")
-public class TransitionAdapter extends EObjectAdapter<Transition> implements org.eclipse.gemoc.sample.legacyfsm.fsm.Transition {
+public class TransitionAdapter extends EObjectAdapter<Transition> implements org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.Transition {
   private FSMMTAdaptersFactory adaptersFactory;
   
   public TransitionAdapter() {
@@ -77,21 +77,21 @@ public class TransitionAdapter extends EObjectAdapter<Transition> implements org
   
   @Override
   public EClass eClass() {
-    return org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.eINSTANCE.getTransition();
+    return org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.eINSTANCE.getTransition();
   }
   
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__NAME:
     		return getName();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__SOURCE:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__SOURCE:
     		return getSource();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__TARGET:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__TARGET:
     		return getTarget();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__INPUT:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__INPUT:
     		return getInput();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__OUTPUT:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__OUTPUT:
     		return getOutput();
     }
     
@@ -101,15 +101,15 @@ public class TransitionAdapter extends EObjectAdapter<Transition> implements org
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__NAME:
     		return getName() != NAME_EDEFAULT;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__SOURCE:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__SOURCE:
     		return getSource() != null;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__TARGET:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__TARGET:
     		return getTarget() != null;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__INPUT:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__INPUT:
     		return getInput() != INPUT_EDEFAULT;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__OUTPUT:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__OUTPUT:
     		return getOutput() != OUTPUT_EDEFAULT;
     }
     
@@ -119,27 +119,27 @@ public class TransitionAdapter extends EObjectAdapter<Transition> implements org
   @Override
   public void eSet(final int featureID, final Object newValue) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__NAME:
     		setName(
     		(java.lang.String)
     		 newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__SOURCE:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__SOURCE:
     		setSource(
-    		(org.eclipse.gemoc.sample.legacyfsm.fsm.State)
+    		(org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State)
     		 newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__TARGET:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__TARGET:
     		setTarget(
-    		(org.eclipse.gemoc.sample.legacyfsm.fsm.State)
+    		(org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State)
     		 newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__INPUT:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__INPUT:
     		setInput(
     		(java.lang.String)
     		 newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.TRANSITION__OUTPUT:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.TRANSITION__OUTPUT:
     		setOutput(
     		(java.lang.String)
     		 newValue);

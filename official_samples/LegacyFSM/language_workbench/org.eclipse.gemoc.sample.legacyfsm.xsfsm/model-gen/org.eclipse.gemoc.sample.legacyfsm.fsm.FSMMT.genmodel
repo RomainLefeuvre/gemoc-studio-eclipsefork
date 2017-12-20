@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gemoc.sample.legacyfsm.xsfsm/src-gen" modelPluginID="org.eclipse.gemoc.sample.legacyfsm.xsfsm" modelName="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/org.eclipse.gemoc.sample.legacyfsm.xsfsm/model-gen/org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore</foreignModel>
+  <genPackages prefix="Fsm" basePackage="org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt" disposableProviderFactory="true">
+    <ecorePackage href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//StateMachine"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//StateMachine/ownedStates"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//StateMachine/initialState"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//StateMachine/ownedTransitions"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//State"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//State/owningFSM"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//State/outgoingTransitions"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//State/incomingTransitions"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//Transition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//Transition/source"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//Transition/target"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//Transition/input"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//Transition/output"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//NamedElement"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT.ecore#//NamedElement/name"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>

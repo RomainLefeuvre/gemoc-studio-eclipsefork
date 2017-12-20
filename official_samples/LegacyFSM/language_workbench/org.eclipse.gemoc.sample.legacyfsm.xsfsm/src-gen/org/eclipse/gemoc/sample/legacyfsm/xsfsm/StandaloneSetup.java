@@ -17,6 +17,10 @@ public class StandaloneSetup {
   
   public void doEMFRegistration() {
     EPackage.Registry.INSTANCE.put(
+    	org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.eNS_URI,
+    	org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.eINSTANCE
+    );
+    EPackage.Registry.INSTANCE.put(
     	org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.FsmPackage.eNS_URI,
     	org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.FsmPackage.eINSTANCE
     );
@@ -32,6 +36,14 @@ public class StandaloneSetup {
   }
   
   public void doAdaptersRegistration() {
+    MelangeRegistry.LanguageDescriptor fSM = new MelangeRegistryImpl.LanguageDescriptorImpl(
+    	"org.eclipse.gemoc.sample.legacyfsm.fsm.FSM", "", "http://www.gemoc.org/legacyfsm/fsm", "org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT"
+    );
+    fSM.addAdapter("org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT", org.eclipse.gemoc.sample.legacyfsm.fsm.fsm.adapters.fsmmt.FSMAdapter.class);
+    MelangeRegistry.INSTANCE.getLanguageMap().put(
+    	"org.eclipse.gemoc.sample.legacyfsm.fsm.FSM",
+    	fSM
+    );
     MelangeRegistry.LanguageDescriptor xSFSM = new MelangeRegistryImpl.LanguageDescriptorImpl(
     	"org.eclipse.gemoc.sample.legacyfsm.xsfsm.XSFSM", "", "http://org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm/fsm/", "org.eclipse.gemoc.sample.legacyfsm.xsfsm.XSFSMMT"
     );
@@ -40,6 +52,13 @@ public class StandaloneSetup {
     MelangeRegistry.INSTANCE.getLanguageMap().put(
     	"org.eclipse.gemoc.sample.legacyfsm.xsfsm.XSFSM",
     	xSFSM
+    );
+    MelangeRegistry.ModelTypeDescriptor fSMMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
+    	"org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT", "", "http://org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt/"
+    );
+    MelangeRegistry.INSTANCE.getModelTypeMap().put(
+    	"org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT",
+    	fSMMT
     );
     MelangeRegistry.ModelTypeDescriptor xSFSMMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
     	"org.eclipse.gemoc.sample.legacyfsm.xsfsm.XSFSMMT", "", "http://org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsmmt/"

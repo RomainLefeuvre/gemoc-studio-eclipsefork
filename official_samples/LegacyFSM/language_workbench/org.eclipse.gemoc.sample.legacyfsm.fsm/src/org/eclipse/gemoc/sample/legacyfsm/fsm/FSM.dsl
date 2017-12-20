@@ -1,5 +1,3 @@
-DSL org.eclipse.gemoc.sample.legacyfsm.fsm.FSM {
-	abstract-syntax {
-		ecore = "platform:/resource/org.eclipse.gemoc.sample.legacyfsm.fsm.model/model/fsm.ecore"
-	}
-}
+name = org.eclipse.gemoc.sample.legacyfsm.fsm.FSM
+ecore = platform:/resource/org.eclipse.gemoc.sample.legacyfsm.fsm.model/model/fsm.ecore
+

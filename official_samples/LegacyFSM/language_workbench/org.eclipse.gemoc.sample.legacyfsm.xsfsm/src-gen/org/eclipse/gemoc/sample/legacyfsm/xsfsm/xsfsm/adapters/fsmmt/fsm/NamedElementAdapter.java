@@ -6,7 +6,7 @@ import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdapte
 import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.NamedElement;
 
 @SuppressWarnings("all")
-public class NamedElementAdapter extends EObjectAdapter<NamedElement> implements org.eclipse.gemoc.sample.legacyfsm.fsm.NamedElement {
+public class NamedElementAdapter extends EObjectAdapter<NamedElement> implements org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.NamedElement {
   private FSMMTAdaptersFactory adaptersFactory;
   
   public NamedElementAdapter() {
@@ -28,13 +28,13 @@ public class NamedElementAdapter extends EObjectAdapter<NamedElement> implements
   
   @Override
   public EClass eClass() {
-    return org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.eINSTANCE.getNamedElement();
+    return org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.eINSTANCE.getNamedElement();
   }
   
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.NAMED_ELEMENT__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.NAMED_ELEMENT__NAME:
     		return getName();
     }
     
@@ -44,7 +44,7 @@ public class NamedElementAdapter extends EObjectAdapter<NamedElement> implements
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.NAMED_ELEMENT__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.NAMED_ELEMENT__NAME:
     		return getName() != NAME_EDEFAULT;
     }
     
@@ -54,7 +54,7 @@ public class NamedElementAdapter extends EObjectAdapter<NamedElement> implements
   @Override
   public void eSet(final int featureID, final Object newValue) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.NAMED_ELEMENT__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.NAMED_ELEMENT__NAME:
     		setName(
     		(java.lang.String)
     		 newValue);

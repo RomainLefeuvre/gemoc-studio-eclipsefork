@@ -22,7 +22,7 @@
 		<relativePath>..</relativePath>
 	</parent>
     <properties>
-        <tycho-version>0.26.0</tycho-version>
+        <tycho-version>1.0.0</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -34,6 +34,14 @@
         <module>releng/org.eclipse.gemoc.gemoc_studio.additions.feature</module>	
         <module>releng/org.eclipse.gemoc.modeldebugging.feature</module>
         <module>releng/org.eclipse.gemoc.gemoc_studio.updatesite</module>
+        
+        <!-- Tests -->
+        <module>tests/org.eclipse.gemoc.studio.tests.system</module>
+        <!-- backlog tests are not part of the main CI build
+        <module>tests/org.eclipse.gemoc.studio.tests.system.backlog</module>
+        -->
+        
+        
     </modules>
 
     <repositories>

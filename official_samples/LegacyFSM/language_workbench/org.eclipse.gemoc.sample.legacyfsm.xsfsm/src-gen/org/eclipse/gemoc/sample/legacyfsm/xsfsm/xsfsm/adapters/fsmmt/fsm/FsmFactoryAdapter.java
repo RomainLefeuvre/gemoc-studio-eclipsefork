@@ -2,11 +2,11 @@ package org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.fsm;
 
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.FsmFactory;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.State;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.StateMachine;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.Transition;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmFactory;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.StateMachine;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.Transition;
 import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory;
 
 @SuppressWarnings("all")
@@ -36,6 +36,6 @@ public class FsmFactoryAdapter extends EFactoryImpl implements FsmFactory {
   }
   
   public FsmPackage getFsmPackage() {
-    return org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.eINSTANCE;
+    return org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.eINSTANCE;
   }
 }

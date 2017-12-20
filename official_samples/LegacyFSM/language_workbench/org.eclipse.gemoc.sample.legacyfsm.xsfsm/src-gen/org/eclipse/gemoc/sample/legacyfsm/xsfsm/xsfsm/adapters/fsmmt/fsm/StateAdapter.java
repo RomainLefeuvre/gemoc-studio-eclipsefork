@@ -4,13 +4,13 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.StateMachine;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.Transition;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.StateMachine;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.Transition;
 import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.adapters.fsmmt.FSMMTAdaptersFactory;
 import org.eclipse.gemoc.sample.legacyfsm.xsfsm.xsfsm.fsm.State;
 
 @SuppressWarnings("all")
-public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.gemoc.sample.legacyfsm.fsm.State {
+public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.State {
   private FSMMTAdaptersFactory adaptersFactory;
   
   public StateAdapter() {
@@ -62,19 +62,19 @@ public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.g
   
   @Override
   public EClass eClass() {
-    return org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.eINSTANCE.getState();
+    return org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.eINSTANCE.getState();
   }
   
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__NAME:
     		return getName();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__OWNING_FSM:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__OWNING_FSM:
     		return getOwningFSM();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__OUTGOING_TRANSITIONS:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__OUTGOING_TRANSITIONS:
     		return getOutgoingTransitions();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__INCOMING_TRANSITIONS:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__INCOMING_TRANSITIONS:
     		return getIncomingTransitions();
     }
     
@@ -84,13 +84,13 @@ public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.g
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__NAME:
     		return getName() != NAME_EDEFAULT;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__OWNING_FSM:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__OWNING_FSM:
     		return getOwningFSM() != null;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__OUTGOING_TRANSITIONS:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__OUTGOING_TRANSITIONS:
     		return getOutgoingTransitions() != null && !getOutgoingTransitions().isEmpty();
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__INCOMING_TRANSITIONS:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__INCOMING_TRANSITIONS:
     		return getIncomingTransitions() != null && !getIncomingTransitions().isEmpty();
     }
     
@@ -100,21 +100,21 @@ public class StateAdapter extends EObjectAdapter<State> implements org.eclipse.g
   @Override
   public void eSet(final int featureID, final Object newValue) {
     switch (featureID) {
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__NAME:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__NAME:
     		setName(
     		(java.lang.String)
     		 newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__OWNING_FSM:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__OWNING_FSM:
     		setOwningFSM(
-    		(org.eclipse.gemoc.sample.legacyfsm.fsm.StateMachine)
+    		(org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.StateMachine)
     		 newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__OUTGOING_TRANSITIONS:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__OUTGOING_TRANSITIONS:
     		getOutgoingTransitions().clear();
     		getOutgoingTransitions().addAll((Collection) newValue);
     		return;
-    	case org.eclipse.gemoc.sample.legacyfsm.fsm.FsmPackage.STATE__INCOMING_TRANSITIONS:
+    	case org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmPackage.STATE__INCOMING_TRANSITIONS:
     		getIncomingTransitions().clear();
     		getIncomingTransitions().addAll((Collection) newValue);
     		return;

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Set;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.gemoc.sample.legacyfsm.fsm.FSMMT;
-import org.eclipse.gemoc.sample.legacyfsm.fsm.FsmFactory;
+import org.eclipse.gemoc.sample.legacyfsm.fsm.fsmmt.fsm.FsmFactory;
 
 @SuppressWarnings("all")
 public class XSFSMAdapter extends ResourceAdapter implements FSMMT {
