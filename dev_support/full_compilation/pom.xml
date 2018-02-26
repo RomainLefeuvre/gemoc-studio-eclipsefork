@@ -18,8 +18,8 @@
 		<module>../../../gemoc-studio-concurrency/moccml/mapping/deployment/org.eclipse.gemoc.moccml.mapping.build</module>
 		<module>../../../gemoc-studio-concurrency/moccml/constraint</module>
 		<module>../../../gemoc-studio-concurrency/ccsljava_execution</module>
-		<module>../../../gemoc-studio-coordination/bcool/deployment/org.eclipse.gemoc.bcool.build</module>
-		<module>../../../gemoc-studio-coordination/heterogeneousCoordinationEngine</module>
+		<!--<module>../../../gemoc-studio-coordination/bcool/deployment/org.eclipse.gemoc.bcool.build</module>
+		<module>../../../gemoc-studio-coordination/heterogeneousCoordinationEngine</module>-->
 	</modules>
 
 </project>
