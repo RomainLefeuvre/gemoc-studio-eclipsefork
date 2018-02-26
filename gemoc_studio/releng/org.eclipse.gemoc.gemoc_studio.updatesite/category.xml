@@ -14,6 +14,9 @@
    <feature url="features/org.eclipse.gemoc.modeldebugging.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.modeldebugging.feature" version="3.0.0.qualifier">
       <category name="GEMOC_AllInOne"/>
    </feature>
+   <feature url="features/org.eclipse.gemoc.concurrency.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.concurrency.feature" version="3.0.0.qualifier">
+      <category name="GEMOC_AllInOne"/>
+   </feature>
    <feature url="features/org.eclipse.gemoc.commons.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature" version="3.0.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
@@ -92,7 +95,28 @@
    <feature url="features/org.eclipse.gemoc.dsl.debug.sirius.ui.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.dsl.debug.sirius.ui.feature.source" version="3.0.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
+   <feature url="features/fr.inria.aoste.timesquare.feature_1.0.0.qualifier.jar" id="fr.inria.aoste.timesquare.feature" version="1.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
 
+   <feature url="features/forg.eclipse.gemoc.moccml.mapping.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.moccml.mapping.feature" version="3.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
+   <feature url="features/forg.eclipse.gemoc.moccml.mapping.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.moccml.mapping.feature.source" version="3.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
+   <feature url="features/org.eclipse.gemoc.moccml.constraint.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.moccml.constraint.feature" version="3.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
+   <feature url="features/org.eclipse.gemoc.moccml.constraint.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.moccml.constraint.feature.source" version="3.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
+   <feature url="features/org.eclipse.gemoc.executionengine.ccsljava.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.executionengine.ccsljava.feature" version="3.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
+   <feature url="features/org.eclipse.gemoc.executionengine.ccsljava.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.executionengine.ccsljava.feature.source" version="3.0.0.qualifier">
+      <category name="GEMOC_Concurrency_Components"/>
+   </feature>
 
    <category-def name="GEMOC_AllInOne" label="GEMOC all in one">
       <description>
