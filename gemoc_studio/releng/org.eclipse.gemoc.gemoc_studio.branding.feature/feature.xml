@@ -49,6 +49,10 @@ http://www.eclipse.org/legal/epl-v10.html
       <import feature="org.eclipse.e4.rcp" version="0.0.0" match="greaterOrEqual"/>
       <import feature="fr.inria.diverse.melange.sdk" version="0.0.0" match="greaterOrEqual"/>
 
+      <import feature="fr.inria.aoste.timesquare.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.gemoc.moccml.mapping.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.gemoc.moccml.constraint.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.gemoc.executionengine.ccsljava.feature" version="0.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
