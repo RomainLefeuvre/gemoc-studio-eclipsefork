@@ -60,7 +60,7 @@
             <url>http://download.eclipse.org/sirius/updates/releases/5.0.2/oxygen/</url>
         </repository>
   	<repository>
-            <id>TimeSquare</id>
+            <id>timesquare</id>
             <layout>p2</layout>
             <url>http://timesquare.inria.fr/update_site/oxygen/</url>
 	</repository>
