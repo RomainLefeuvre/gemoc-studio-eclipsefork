@@ -134,8 +134,8 @@ This Agreement is governed by the laws of the State of New York and the intellec
       <import feature="org.eclipse.gemoc.moccml.mapping.feature.source" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.gemoc.moccml.constraint.feature" version="0.0.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.gemoc.moccml.constraint.feature.source" version="0.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.gemoc.executionengine.ccsljava.feature" version="0.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.gemoc.executionengine.ccsljava.feature.source" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature" version="0.0.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature.source" version="0.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin

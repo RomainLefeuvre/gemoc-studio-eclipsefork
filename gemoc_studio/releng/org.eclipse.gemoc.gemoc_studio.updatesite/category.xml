@@ -111,10 +111,10 @@
    <feature url="features/org.eclipse.gemoc.moccml.constraint.feature.source_0.1.1.qualifier.jar" id="org.eclipse.gemoc.moccml.constraint.feature.source" version="0.1.1.qualifier">
       <category name="GEMOC_Concurrency_Components"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.executionengine.ccsljava.feature_2.3.0.qualifier.jar" id="org.eclipse.gemoc.executionengine.ccsljava.feature" version="2.3.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature_2.3.0.qualifier.jar" id="org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature" version="2.3.0.qualifier">
       <category name="GEMOC_Concurrency_Components"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.executionengine.ccsljava.feature.source_2.3.0.qualifier.jar" id="org.eclipse.gemoc.executionengine.ccsljava.feature.source" version="2.3.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature.source_2.3.0.qualifier.jar" id="org.eclipse.gemoc.execution.concurrent.ccsljavaxdsml.feature.source" version="2.3.0.qualifier">
       <category name="GEMOC_Concurrency_Components"/>
    </feature>
 
