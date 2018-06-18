@@ -31,6 +31,8 @@ import org.junit.runner.RunWith
 import org.junit.runners.MethodSorters
 import org.eclipse.swt.widgets.Display
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences
+import org.eclipse.gemoc.xdsmlframework.test.lib.TailWorkspaceLogToStderrRule
+import org.junit.Rule
 
 /**
  * Verifies that we can use the wizard to install the official sample
@@ -56,8 +58,13 @@ public class DeployOfficialSampleLegacyFSM_Test extends AbstractXtextTests
 		SWTBotPreferences.TIMEOUT = WorkspaceTestHelper.SWTBotPreferencesTIMEOUT_4_GEMOC;
 		bot.resetWorkbench
 		IResourcesSetupUtil::cleanWorkspace
+		IResourcesSetupUtil::reallyWaitForAutoBuild
+		WorkspaceTestHelper::reallyWaitForJobs(2)
 	}
 	
+	@Rule
+    public TailWorkspaceLogToStderrRule workspaceLogRule = new TailWorkspaceLogToStderrRule();
+    
 	@Before
 	override setUp() {
 		helper.setTargetPlatform
@@ -67,6 +74,7 @@ public class DeployOfficialSampleLegacyFSM_Test extends AbstractXtextTests
 		key.pressShortcut(Keystrokes.ESC);		
 		// make sure we are on the correct perspective
 		bot.perspectiveById(XDSMLFrameworkUI.ID_PERSPECTIVE).activate()
+		IResourcesSetupUtil::reallyWaitForAutoBuild
 	}
 	
 	@After
@@ -76,15 +84,15 @@ public class DeployOfficialSampleLegacyFSM_Test extends AbstractXtextTests
 	
 	@Test
 	def void test01_InstallLegacyFsm() throws Exception {
-		val activeShell = bot.activeShell // the focus is lost after click on "Browse..."
+		//val activeShell = bot.activeShell // the focus is lost after click on "Browse..."
 		bot.menu("File").menu("New").menu("Example...").click();
 		bot.tree().getTreeItem("GEMOC language workbench examples").select();
 		bot.tree().getTreeItem("GEMOC language workbench examples").expand();
 		bot.tree().getTreeItem("GEMOC language workbench examples").getNode("GEMOC FSM Language (Sequential)").select();
 	  	bot.button("Finish").click();
 
-		WorkspaceTestHelper::reallyWaitForJobs(2)
 		IResourcesSetupUtil::reallyWaitForAutoBuild
+		WorkspaceTestHelper::reallyWaitForJobs(4)
 		IResourcesSetupUtil::fullBuild
 		IResourcesSetupUtil::reallyWaitForAutoBuild
 		WorkspaceTestHelper::reallyWaitForJobs(4)
@@ -97,8 +105,8 @@ public class DeployOfficialSampleLegacyFSM_Test extends AbstractXtextTests
 		helper.assertProjectExists(BASE_NAME+".fsm.model.editor");
 		helper.assertProjectExists(BASE_NAME+".xsfsm");
 		helper.assertProjectExists(BASE_NAME+".xsfsm.design");
-		helper.assertProjectExists(BASE_NAME+".xsfsm.trace");
 		helper.assertProjectExists(BASE_NAME+".xsfsm.xsfsm");
+		helper.assertProjectExists(BASE_NAME+".xsfsm.xsfsm.trace");
 
 		helper.assertNoMarkers();		
 	}
