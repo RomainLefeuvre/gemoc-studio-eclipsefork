@@ -5,7 +5,8 @@
 showBranchForFolder () {
    local originFolder=`pwd`
    cd $1
-   echo $1 is on branch `git rev-parse --abbrev-ref HEAD` - `git symbolic-ref --short HEAD`
+#   echo $1 is on branch `git rev-parse --abbrev-ref HEAD` - `git symbolic-ref --short HEAD`
+   echo -e "$1 is on branch \t `git branch | grep '*'`"
    cd $originFolder
 }
 
