@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.gemoc.modeldebugging.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.modeldebugging.feature" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.modeldebugging.feature_3.1.0.qualifier.jar" id="org.eclipse.gemoc.modeldebugging.feature" version="3.1.0.qualifier">
       <category name="GEMOC_AllInOne"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.concurrency.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.concurrency.feature" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.concurrency.feature_3.1.0.qualifier.jar" id="org.eclipse.gemoc.concurrency.feature" version="3.1.0.qualifier">
       <category name="GEMOC_AllInOne"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.commons.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.commons.feature_3.1.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature" version="3.1.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.commons.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature.source" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.commons.feature.source_3.1.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature.source" version="3.1.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.commons.3rdparty.feature_3.0.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.commons.3rdparty.feature_3.1.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature" version="3.1.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.commons.3rdparty.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature.source" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.commons.3rdparty.feature.source_3.1.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature.source" version="3.1.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
-   <feature url="features/org.eclipse.gemoc.commons.feature.source_3.0.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature.source" version="3.0.0.qualifier">
+   <feature url="features/org.eclipse.gemoc.commons.feature.source_3.1.0.qualifier.jar" id="org.eclipse.gemoc.commons.feature.source" version="3.1.0.qualifier">
       <category name="GEMOC_ModelDebugging_Components"/>
    </feature>
    <feature url="features/org.eclipse.gemoc.execution.sequential.javaxdsml.feature_4.0.0.qualifier.jar" id="org.eclipse.gemoc.execution.sequential.javaxdsml.feature" version="4.0.0.qualifier">
