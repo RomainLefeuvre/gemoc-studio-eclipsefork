@@ -10,39 +10,57 @@
 	<packaging>jar</packaging>
 	<description>Maven distribution of org.eclipse.emf.compare osgi bundle without maven dependencies</description>
 	<url>https://www.eclipse.org/gemoc/</url>
-	
+
 	<parent>
 		<groupId>org.eclipse.gemoc.gemoc-studio.thirdparty.bundle</groupId>
 		<artifactId>org.eclipse.gemoc.gemoc_studio.thirdparty-bundle</artifactId>
 		<version>3.4.0-SNAPSHOT</version>
 	</parent>
-	
+
 	<build>
 		<plugins>
 			<plugin>
-		      <artifactId>maven-antrun-plugin</artifactId>
-		      <version>1.8</version>
-		      <executions>
-		         <execution>
-		            <phase>generate-resources</phase>
-		            <configuration>
-		               <tasks>
-		                  <echo message="unzipping file" />
-		                  <unzip src="${project.basedir}/${project.artifactId}_2.16.0.20190920.jar" dest="${project.build.directory}/classes/" >
-		                  <patternset>
-		                  	<exclude name="META-INF/*.SF"/>
-		                  	<exclude name="META-INF/*.DSA"/>
-		                  	<exclude name="META-INF/*.RSA"/>
-		                  </patternset>
-		                  </unzip>
-		               </tasks>
-		            </configuration>
-		            <goals>
-		               <goal>run</goal>
-		            </goals>
-		         </execution>
-		      </executions>
-		   </plugin>
-	   </plugins>
-   </build>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<configuration>
+							<tasks>
+								<echo message="unzipping file" />
+								<unzip
+									src="${project.basedir}/${project.artifactId}_2.16.0.20190920.jar"
+									dest="${project.build.directory}/classes/">
+									<patternset>
+										<exclude name="META-INF/*.SF" />
+										<exclude name="META-INF/*.DSA" />
+										<exclude name="META-INF/*.RSA" />
+										<exclude name="META-INF/maven/**" />
+									</patternset>
+								</unzip>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<!-- <dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.ecore.change</artifactId>
+		</dependency> -->
+		<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.ecore</artifactId>
+		</dependency>
+		<dependency>
+				<groupId>org.eclipse.emf</groupId>
+				<artifactId>org.eclipse.emf.common</artifactId>
+		</dependency>
+		
+	</dependencies>
 </project>

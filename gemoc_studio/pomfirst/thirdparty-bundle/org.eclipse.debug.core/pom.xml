@@ -33,6 +33,7 @@
 		                  	<exclude name="META-INF/*.SF"/>
 		                  	<exclude name="META-INF/*.DSA"/>
 		                  	<exclude name="META-INF/*.RSA"/>
+		                  	<exclude name="META-INF/maven/**"/>
 		                  </patternset>
 		                  </unzip>
 		               </tasks>
