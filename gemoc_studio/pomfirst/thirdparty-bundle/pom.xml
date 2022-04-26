@@ -20,6 +20,8 @@
 		<module>org.eclipse.emf.compare</module>
 		<module>org.eclipse.emf.edit</module>
 		<module>org.eclipse.emf.transaction</module>
+		<module>org.eclipse.emf.validation</module>
+		<module>org.eclipse.core.runtime</module>
 	</modules>
 
 	<properties>

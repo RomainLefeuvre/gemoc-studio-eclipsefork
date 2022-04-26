@@ -28,7 +28,14 @@
 		            <configuration>
 		               <tasks>
 		                  <echo message="unzipping file" />
-		                  <unzip src="${project.basedir}/${project.artifactId}_3.5.3.202011201248.jar" dest="${project.build.directory}/classes/" />
+		                  <unzip src="${project.basedir}/${project.artifactId}_3.5.3.202011201248.jar" dest="${project.build.directory}/classes/" >
+		                  <patternset>
+		                  	<exclude name="META-INF/*.SF"/>
+		                  	<exclude name="META-INF/*.DSA"/>
+		                  	<exclude name="META-INF/*.RSA"/>
+		                  	<exclude name="META-INF/maven/**"/>
+		                  </patternset>
+		                  </unzip>
 		               </tasks>
 		            </configuration>
 		            <goals>
